@@ -1,23 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import { Playground } from "@wundergraph/playground";
+// directly import style from node_modules
+import "@wundergraph/playground/styles";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Playground
+        routingUrl={"http://localhost:4000/query"} // the endpoint of the router
+        hideLogo={false} // boolean to hide the wundergraph logo
+        // theme={"dark"} // 'light' or 'dark';
+      />
     </div>
   );
 }
